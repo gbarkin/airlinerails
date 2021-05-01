@@ -21,7 +21,7 @@ module Api
         if airline.save
           render json: AirlineSerializer.new(airline).serialized_json
         else
-          render json: { error: airline.errors.messages }, status: 422
+          render json: { error: ariline.errors.messages }, status: 422
         end
       end
 
@@ -45,7 +45,6 @@ module Api
         end
       end
 
-      #hello
       private
 
       def airline_params
